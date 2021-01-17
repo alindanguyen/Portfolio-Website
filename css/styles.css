@@ -1,12 +1,11 @@
 /* Declarations for my color variables */
 :root {
   --primary-color: #357b70;
-  --secondary-color: #e0b354;
-  --tertiary-color: #eccb86;
-  --text-color: #357b70;
-  --dark-gray: #6c6c6c;
+  --secondary-color: #05676e;
+  --tertiary-color: #489c79;
+  --text-color: #fff;
   --background-color: #lightgray;
-  --font-weight: 500
+  --font-weight: 500;
 }
 
 /* Sets default width of all elements to include border */
@@ -24,7 +23,6 @@ body {
 }
 
 /* Header style */
-
 h1 {
   font-size: 30px;
   font-weight: var(--font-weight);
@@ -35,7 +33,7 @@ h2 {
 }
 h3 {
   font-size: 22px;
-  font-weight: var(--font-weight);
+
 }
 h4 {
   font-size: 20px;
@@ -43,12 +41,12 @@ h4 {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 a:visited {
   /*visited link*/
-  color: var(--darkgray);
+  color: var(--secondary-color);
 }
 
 a:hover, a:focus {
@@ -58,7 +56,21 @@ a:hover, a:focus {
 
 a:active {
   /*selected link */
-  color: #289c79;
+  color: var(--tertiary-color);
+}
+
+/*li information*/
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
 }
 
 button,
@@ -67,12 +79,12 @@ button,
   display: inline-block;
   font-family: inherit;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition: 0.2s opacity;
+  transition: 0.5s opacity;
 }
 
 button:hover,
@@ -85,9 +97,9 @@ button:focus,
 }
 
 .button__secondary {
-    background-color: #e0b354;
-    color: #darkgray;
-  }
+  background-color: #e0b354;
+  color: #darkgray;
+}
 
 .page-header{
   display: flex;
@@ -102,19 +114,6 @@ button:focus,
 .page-header .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-}
-
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item--active {
-  text-decoration: none;
 }
 
 .profile {
@@ -149,10 +148,8 @@ button:focus,
 }
 
 .page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center
+  position: absolute;
+  flex-grow: row;
 }
 
 .contact-info {
