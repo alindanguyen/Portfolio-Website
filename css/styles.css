@@ -1,10 +1,11 @@
 /* Declarations for my color variables */
 :root {
   --primary-color: #357b70;
-  --secondary-color: #05676e;
-  --tertiary-color: #489c79;
-  --text-color: #fff;
-  --background-color: #lightgray;
+  --secondary-color: #e0b354;
+  --tertiary-color: #eccb86;
+  --text-color: #357b70;
+  --dark-gray: #6c6c6c;
+  --background-color: #f9f9f9;
   --font-weight: 500;
 }
 
@@ -13,12 +14,12 @@
   box-sizing: border-box;
 }
 
-/* Body styles*/
+/* Body styles */
 body {
   background-color: var(--background-color);
   font-family: 'Montserrat', sans-serif;
-  font-weight:  300;
-  font-size:  16px;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -27,49 +28,42 @@ h1 {
   font-size: 30px;
   font-weight: var(--font-weight);
 }
+
 h2 {
   font-size: 24px;
   font-weight: var(--font-weight);
 }
+
 h3 {
   font-size: 22px;
-
 }
+
 h4 {
   font-size: 20px;
   font-weight: var(--font-weight);
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 a:visited {
-  /*visited link*/
-  color: var(--secondary-color);
+  /* visited link */
+  color: var(--dark-gray);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
 }
 
 a:active {
-  /*selected link */
+  /* selected link */
   color: var(--tertiary-color);
 }
 
-/*li information*/
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item--active {
+a.image-link {
   text-decoration: none;
 }
 
@@ -79,7 +73,7 @@ button,
   display: inline-block;
   font-family: inherit;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -98,10 +92,10 @@ button:focus,
 
 .button__secondary {
   background-color: #e0b354;
-  color: #darkgray;
+  color: darkgray;
 }
 
-.page-header{
+.page-header {
   display: flex;
   width: 100%;
   padding: 20px;
@@ -116,61 +110,80 @@ button:focus,
   text-align: right;
 }
 
+/* li information */
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
   padding: 30px 100px 30px 30px;
-  }
+}
 
 .profile__portrait {
   float: left;
   width: 200px;
   margin-right: 40px;
   border-radius: 50%;
-  }
+}
 
 .about {
   max-width: 700px;
   margin: 20px auto;
   text-align: left;
-  }
+}
 
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 8px;
-  padding: 10px 30px 30px 30px;
+  padding: 10px 30px 30px;
 }
 
 .grid__item {
   background-color: var(--tertiary-color);
-  padding: 20px
+  padding: 20px;
 }
 
 .page-footer {
-  position: absolute;
-  flex-grow: row;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .contact-info {
   padding: 10px 70px;
 }
 
-.contact-form  {
+.contact-form {
   padding: 100px 70px;
 }
 
 @keyframes color-change {
   0% {
     fill: #edc655;
-}
+  }
+
   50% {
     fill: #f7e0a7;
   }
+
   100% {
-    fill: #e6b12e
+    fill: #e6b12e;
   }
 }
+
 .sun {
   animation: 15s color-change infinite alternate linear;
 }
@@ -179,13 +192,16 @@ button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
 }
+
 .st6 {
   animation: 30s cloud-move infinite alternate linear;
 }
+
 .st7 {
   animation: 45s cloud-move infinite alternate linear;
 }
@@ -194,10 +210,12 @@ button:focus,
   from {
     transform: translate(446px, 48px);
   }
+
   to {
-    transform: translate(100ps, 48px);
+    transform: translate(100px, 48px);
   }
 }
+
 .st8 {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
@@ -207,11 +225,13 @@ button:focus,
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 550px) and (max-width: 750px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .project-grid {
     grid-gap: 10px;
