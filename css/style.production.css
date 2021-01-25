@@ -5,17 +5,27 @@
 * Browsers: last 4 version
 */
 
+/*
+Hex Color Reference
+#357b70 Dark, dusty green
+#05676e Darker, bluer dusty green
+#489c79 Lighter dusty green
+#e0b354 Mustard
+#eccb86 Light mustard
+#2b2b2b Dark gray
+#6c6c6c Medium gray
+ */
+
 /* Declarations for my color variables */
 
 /* Sets default width of all elements to include border */
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Body styles */
 body {
-  background-color: #f9f9f9;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -48,18 +58,17 @@ a {
 
 a:visited {
   /* visited link */
-  color: #6c6c6c;
+  color: #05676e;
 }
 
 a:hover,
 a:focus {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 
 a:active {
   /* selected link */
-  color: #eccb86;
+  color: #489c79;
 }
 
 a.image-link {
@@ -71,7 +80,7 @@ button {
   display: inline-block;
   font-family: inherit;
   background-color: #357b70;
-  color: #f9f9f9;
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -86,7 +95,22 @@ button {
   display: inline-block;
   font-family: inherit;
   background-color: #357b70;
-  color: #f9f9f9;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+.button:visited {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -100,14 +124,13 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   opacity: 0.8;
 }
 
 .button__secondary {
   background-color: #e0b354;
-  color: darkgray;
+  color: #6c6c6c;
 }
 
 .page-header {

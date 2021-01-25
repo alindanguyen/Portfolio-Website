@@ -1,12 +1,22 @@
+/*
+Hex Color Reference
+#357b70 Dark, dusty green
+#05676e Darker, bluer dusty green
+#489c79 Lighter dusty green
+#e0b354 Mustard
+#eccb86 Light mustard
+#2b2b2b Dark gray
+#6c6c6c Medium gray
+ */
+
 /* Declarations for my color variables */
 :root {
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --tertiary-color: #eccb86;
-  --text-color: #357b70;
+  --text-color: #2b2b2b;
   --dark-gray: #6c6c6c;
-  --background-color: #f9f9f9;
-  --font-weight: 500;
+  --headfont-weight: 500;
 }
 
 /* Sets default width of all elements to include border */
@@ -16,7 +26,6 @@
 
 /* Body styles */
 body {
-  background-color: var(--background-color);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -26,12 +35,12 @@ body {
 /* Header style */
 h1 {
   font-size: 30px;
-  font-weight: var(--font-weight);
+  font-weight: var(--headfont-weight);
 }
 
 h2 {
   font-size: 24px;
-  font-weight: var(--font-weight);
+  font-weight: var(--headfont-weight);
 }
 
 h3 {
@@ -40,27 +49,26 @@ h3 {
 
 h4 {
   font-size: 20px;
-  font-weight: var(--font-weight);
+  font-weight: var(--headfont-weight);
 }
 
 a {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 a:visited {
   /* visited link */
-  color: var(--dark-gray);
+  color: #05676e;
 }
 
 a:hover,
 a:focus {
-  /* No underlining when hovering over a link */
   text-decoration: none;
 }
 
 a:active {
   /* selected link */
-  color: var(--tertiary-color);
+  color: #489c79;
 }
 
 a.image-link {
@@ -68,12 +76,13 @@ a.image-link {
 }
 
 button,
-.button {
+.button,
+.button:visited {
   border: none;
   display: inline-block;
   font-family: inherit;
   background-color: var(--primary-color);
-  color: var(--background-color);
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -85,14 +94,13 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   opacity: 0.8;
 }
 
 .button__secondary {
   background-color: #e0b354;
-  color: darkgray;
+  color: var(--dark-gray);
 }
 
 .page-header {
