@@ -68,12 +68,13 @@ a.image-link {
 }
 
 button,
-.button {
+.button,
+.button:visited {
   border: none;
   display: inline-block;
   font-family: inherit;
   background-color: var(--primary-color);
-  color: var(--background-color);
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -141,6 +142,7 @@ button:focus,
   max-width: 700px;
   margin: 20px auto;
   text-align: left;
+  padding: 10px 30px 30px;
 }
 
 .project-grid {
