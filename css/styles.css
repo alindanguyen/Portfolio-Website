@@ -103,6 +103,32 @@ button:focus,
   color: var(--dark-gray);
 }
 
+input,
+textarea {
+  width: 238px;
+  padding: 6px;
+  margin: 12px 0;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:hover {
+  border: 2px solid #555;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #e8efe9;
+  border: 1px solid lightgray;
+  padding-right: 10px;
+  padding-left: 20px;
+  width: 285px;
+  margin: 20px 0;
+}
+
 .page-header {
   display: flex;
   width: 100%;
@@ -132,6 +158,10 @@ button:focus,
   text-decoration: none;
 }
 
+.enjoy-list li {
+  list-style-type: square;
+}
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -159,7 +189,7 @@ button:focus,
 }
 
 .grid__item {
-  background-color: var(--tertiary-color);
+  background-color: lightgray;
   padding: 20px;
 }
 
